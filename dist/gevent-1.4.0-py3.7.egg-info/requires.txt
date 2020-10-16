@@ -1,0 +1,34 @@
+
+[:platform_python_implementation == "CPython"]
+greenlet>=0.4.14
+
+[:sys_platform == "win32" and platform_python_implementation == "CPython"]
+cffi>=1.11.5
+
+[dnspython]
+dnspython
+idna
+
+[doc]
+repoze.sphinx.autointerface
+
+[events]
+zope.event
+zope.interface
+
+[test]
+zope.interface
+zope.event
+requests
+objgraph
+
+[test:platform_python_implementation == "CPython" or sys_platform != "win32"]
+psutil
+
+[test:python_version == "2.7"]
+futures
+mock
+
+[test:sys_platform != "win32"]
+coverage>=5.0a3
+coveralls>=1.0
