@@ -120,7 +120,7 @@ def update(frame):
 
         # instant growth, proportional decay
         if divs[i] > amp[i]: amp[i] = divs[i]
-        elif divs[i] < amp[i]: amp[i] = amp[i]-(amp[i]-divs[i])/2
+        elif divs[i] < amp[i]: amp[i] = amp[i]-(amp[i]-divs[i])/1.8
 
         waves[i].set_ydata([-amp[i],amp[i]])
         
